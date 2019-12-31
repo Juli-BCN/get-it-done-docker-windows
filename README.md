@@ -1,2 +1,2 @@
-# get-it-done-docker-windows
-For a container running on Windows 2019
+# docker-app-get-it-done-win
+Get IT Done Carrousel on a Docker App for Windows

@@ -5,7 +5,7 @@
 # Core: docker pull mcr.microsoft.com/windows/servercore
 
 FROM mcr.microsoft.com/windows/servercore:ltsc2019
-MAINTAINER "Julian Martin" <julian.martin@leaseplan.com>
+LABEL maintainer="JuliBCN <julibcn@gmail.com>"
 
 # Uses dism.exe to install the IIS role.
 RUN dism.exe /online /enable-feature /all /featurename:iis-webserver /NoRestart
@@ -18,7 +18,7 @@ COPY "src" 'C:\inetpub\wwwroot\'
 CMD [ "cmd" ]
 
 # Build from powershell as
-# docker build -t get-it-done-win .
+# docker build -t get-it-win .
 
 # Run it as
-# docker run -it -p 80:80 get-it-done-win
+# docker run -it -p 80:80 get-it-win
